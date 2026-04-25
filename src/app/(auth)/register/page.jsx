@@ -1,7 +1,9 @@
+import Register from "@/components/Register";
+
 const RegisterPage = () => {
     return (
-        <div>
-            <h1>Register page</h1>
+        <div className="flex justify-center items-center h-screen bg-[#f3f3f3]">
+            <Register />
         </div>
     );
 };
