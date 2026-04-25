@@ -14,7 +14,7 @@ const Categories = async ({ allCategories, activeBtn }) => {
                             className=
                             {`font-semibold text-xl py-2 
                                 ${activeBtn === category.category_id ?
-                                    "text-gray-700 bg-gray-200"
+                                    "text-white bg-purple-500"
                                     : "text-gray-500"}`
                             }
                         >

@@ -1,5 +1,9 @@
 import { Button } from "@heroui/react";
 
+export const metadata = {
+    title: "Dragon News - Career"
+};
+
 const Career = () => {
     return (
         <div className="flex flex-col justify-center items-center h-80 space-y-3 mt-5">
