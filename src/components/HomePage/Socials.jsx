@@ -1,9 +1,20 @@
+"use client"
 import { Button } from "@heroui/react";
 import { BsGithub, BsGoogle } from "react-icons/bs";
 import FbLogo from "@/assets/fb.png"
 import TwitterLogo from "@/assets/twitter.png"
 import InstagramLogo from "@/assets/instagram.png"
 import Image from "next/image";
+import { authClient } from "@/lib/auth-client";
+
+const handleGoogleSignIn = async () => {
+    const data = await authClient.signIn.social({
+        provider: "google",
+    });
+
+    console.log({ data });
+
+}
 
 const Socials = () => {
     return (
@@ -11,7 +22,7 @@ const Socials = () => {
             <div>
                 <h2 className="text-xl font-semibold text-gray-600 mb-2">Login With</h2>
                 <div className="flex flex-col gap-2 mb-2">
-                    <Button variant="outline" className={"rounded w-full text-[#4079ee] border border-[#4079ee] "}><BsGoogle /> Login with Google</Button>
+                    <Button onClick={handleGoogleSignIn} variant="outline" className={"rounded w-full text-[#4079ee] border border-[#4079ee] "}><BsGoogle /> Login with Google</Button>
                     <Button variant="outline" className={"rounded w-full text-black border border-black "}><BsGithub /> Login with Github</Button>
                 </div>
                 <h2 className="text-xl font-semibold text-gray-600 mb-2">Find Us On</h2>
